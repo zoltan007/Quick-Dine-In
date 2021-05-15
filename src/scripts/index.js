@@ -4,19 +4,19 @@ import data from '../DATA.json';
 
 console.log(data);
 
-const hamburgerButtonElement = document.querySelector("#hamburger");
-const drawerElement = document.querySelector("#drawer");
-const mainElement = document.querySelector("main");
+const hamburgerButtonElement = document.querySelector('#hamburger');
+const mainElement = document.querySelector('main');
+const drawerElement = document.querySelector('#drawer');
+
 
 hamburgerButtonElement.addEventListener("click", event => {
-    drawerElement.classList.toggle("open");
+    drawerElement.classList.toggle('open');
     event.stopPropagation();
 });
 
-mainElement.addEventListener("click", event => {
-    drawerElement.classList.remove("open");
-    event.stopPropagation();
-})
+mainElement.addEventListener('click', function () {
+    drawerElement.classList.remove('open');
+});
 
 let datarest='';
 
@@ -38,8 +38,6 @@ data.restaurants.forEach((restaurants) => {
 });
 
 document.getElementById("lists-container").innerHTML = datarest;
-
-
 
 console.log('Hello Coders! :)');
 

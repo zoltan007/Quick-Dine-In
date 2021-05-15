@@ -32,59 +32,72 @@ body {
     top: 0;
 }
 
-#drawer {
+.header {
+    min-height: 56px;
+    transition: min-height 0.3s;
+}
+
+.header-inner {
     width: 100%;
-    position: absolute;
-    transform: translate(-100%, 0);
-    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#drawer.open {
-    transform: translate(0,0);
+.header-title {
+    font-size: 2.5em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #f7a440;
+    text-align: center;
 }
 
-#hamburger {
+.header-hamburger {
     font-size: 32px;
     text-decoration: none;
     color: white;
+    margin: 10px auto;
+    display: none;
 }
 
-nav {
+.nav {
     background-color: rgba(73, 51, 35);
-    padding: 1px;
-    top: 0;
-    text-align: left;
-    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
 }
 
-nav a {
+.nav-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 17%;
+    text-align: center;
+    line-height: 24px;
+    list-style-type: none;
+}
+
+.nav a {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
     color: white;
+    padding: 1em;
+    display: inline-block;
 }
 
-.app-name {
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: #f7a440;
-    font-size: 1.5em;
-}
-
-nav li {
-    display: inline;
-    list-style-type: none;
-}
-
-nav a:hover{
+.nav a:hover{
     font-weight: bold;
-    color: #eaac7f;
+    color: #ffd56b;
 }
-
-.nav-item {
-    margin: 50px;
-}
-
 
 .hero {
     background-image: url(/images/heros/hero-image_2.jpg);
@@ -109,7 +122,7 @@ nav a:hover{
 
 main {
     width: 100%;
-    height: 100%;
+    height: 370%;
     padding: 10px;
 }
 
@@ -182,9 +195,9 @@ footer {
     text-align: center;
     font-weight: lighter;
     color: #eeee;
-    position: absolute;
     bottom: 0;
 }
+
 
 @media screen and (min-width: 500px) {
     .hero-headline {
@@ -192,7 +205,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 768px) {
     #lists-container {
         margin: 30px auto;
         display: grid;
@@ -205,18 +218,54 @@ footer {
         height: 100%;
     }
 
+    footer {
+        margin-top: 1270%;
+    }
+
+    .restaurant-description {
+        font-size: 0.8em;
+    }
+
+    .hero {
+        padding: 5%;
+    }
 }
 
-@media screen and (min-width: 884px) {
-    #drawer {
-      position: relative;
-      transform: translate(0, 0);
+@media screen and (max-width: 884px) {
+    .nav {
+        z-index: 10;
+        background-color: #cc9b6d;
+        width: 300px;
+        position: absolute;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3 ease;
     }
 
-    #hamburger {
-      display: none;
-      text-align: center;
+    .open {
+        -webkit-transform: translate(0,0);
+        transform: translate (0,0);
     }
+
+    .nav-item {
+        display: list-item;
+        border-bottom: 1px solid #f1ca89;
+        width: 100%;
+        text-align: left;
+    }
+
+    .header-hamburger {
+        display: block;
+        text-align: center;
+    }
+
    }
+
+@media screen and (min-width: 1024px) {
+       main {
+           height: 400%;
+       }
+   }
+   
 
 
