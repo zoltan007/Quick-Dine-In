@@ -33,6 +33,12 @@ body {
 }
 
 .header {
+    background-image: url(/images/header-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(49, 11, 11, 0.8);
+    background-blend-mode: darken;
     min-height: 56px;
     transition: min-height 0.3s;
 }
