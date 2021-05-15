@@ -5,12 +5,16 @@
     box-sizing: border-box;
 }
 
+html, body, main {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background-color: #91684a;
     font-family: 'Raleway', sans-serif;
-    padding: 0 auto;
-    margin: 0 auto;
-    width: 100%;
+    padding: 0;
+    margin: 0;
     height: 100%;
 }
 
@@ -28,42 +32,71 @@ body {
     top: 0;
 }
 
-nav {
+.header {
+    min-height: 56px;
+    transition: min-height 0.3s;
+}
+
+.header-inner {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-title {
+    font-size: 2.5em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #f7a440;
+    text-align: center;
+}
+
+.header-hamburger {
+    font-size: 32px;
+    text-decoration: none;
+    color: white;
+    margin: 10px auto;
+    display: none;
+}
+
+.nav {
     background-color: rgba(73, 51, 35);
-    padding: 1px;
-    position: sticky;
-    top: 0;
-    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     width: 100%;
 }
 
-nav a {
+.nav-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 17%;
+    text-align: center;
+    line-height: 24px;
+    list-style-type: none;
+}
+
+.nav a {
     font-size: 20px;
     font-weight: 400;
     text-decoration: none;
     color: white;
+    padding: 1em;
+    display: inline-block;
 }
 
-.app-name {
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: #f7a440;
-    font-size: 1.5em;
-}
-
-nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 70px;
-}
-
-nav a:hover{
+.nav a:hover{
     font-weight: bold;
-    color: #eaac7f;
-}
-
-.nav-item {
-    margin-right: 30px;
+    color: #ffd56b;
 }
 
 .hero {
@@ -89,29 +122,26 @@ nav a:hover{
 
 main {
     width: 100%;
-    margin: 0 auto;
-    padding:20px;
+    height: 370%;
+    padding: 10px;
 }
 
-.lists {
-    width: 100%;
-    margin: 50px auto;
-    text-align: center;
-    color: #ffe6ca;
+#lists-container {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    overflow: auto;
 }
 
 .list-label {
     font-size: 40px;
     font-weight: bold;
+    text-align: center;
+    color: #ffe6ca;
+    margin-top: 20px;
 }
 
-.card {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px;
-    min-height: 75%;
-    overflow: auto;
-}
 
 .restaurant-item {
     margin: 27px;
@@ -120,13 +150,31 @@ main {
     border-radius: 10px;
     overflow: hidden;
     background-color: rgba(234, 172, 127, 0.5);
+    color: #f0ebcc;
 }
 
 .restaurant-thumbnail {
     width: 100%;
+    height: 300px;
+}
+
+.restaurant-name {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.restaurant-city {
+    text-align: center;
+}
+
+.restaurant-description {
+    font-size: 0.9em;
+    line-height: 1.3;
 }
 
 .find-more {
+    margin-top: 10px;
     font-size: 1em;
     min-width: 44px;
     min-height: 44px;
@@ -147,5 +195,77 @@ footer {
     text-align: center;
     font-weight: lighter;
     color: #eeee;
+    bottom: 0;
 }
+
+
+@media screen and (min-width: 500px) {
+    .hero-headline {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        overflow: auto;
+    }
+
+    .restaurant-thumbnail {
+        height: 100%;
+    }
+
+    footer {
+        margin-top: 1270%;
+    }
+
+    .restaurant-description {
+        font-size: 0.8em;
+    }
+
+    .hero {
+        padding: 5%;
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .nav {
+        z-index: 10;
+        background-color: #cc9b6d;
+        width: 300px;
+        position: absolute;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3 ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0,0);
+        transform: translate (0,0);
+    }
+
+    .nav-item {
+        display: list-item;
+        border-bottom: 1px solid #f1ca89;
+        width: 100%;
+        text-align: left;
+    }
+
+    .header-hamburger {
+        display: block;
+        text-align: center;
+    }
+
+   }
+
+@media screen and (min-width: 1024px) {
+       main {
+           height: 400%;
+       }
+   }
+   
+
 
