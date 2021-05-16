@@ -24,7 +24,7 @@ data.restaurants.forEach((restaurants) => {
     datarest +=`
         <div class="card">
              <article class="restaurant-item">
-                 <img class="restaurant-thumbnail" src="${restaurants.pictureId}" alt="">
+                 <img class="restaurant-thumbnail" src="${restaurants.pictureId}" alt="${restaurants.name}">
                  <div class="restaurant-item-content">
                      <h1 class="restaurant-name">${restaurants.name}</h1>
                      <p class="restaurant-city"><strong>${restaurants.city}</strong></p>
