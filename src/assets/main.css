@@ -215,6 +215,8 @@ footer {
     bottom: 0;
 }
 
+/* iPhone 5/SE */
+
 @media only screen and (device-width : 320px) and (device-height : 568px) { 
     #lists-container {
         margin: 30px auto;
@@ -346,6 +348,8 @@ footer {
     }
 
 }
+
+/* Larger Screen */
 
 @media only screen and (min-device-width: 1366px) {
     #lists-container {
