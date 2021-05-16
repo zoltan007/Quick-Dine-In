@@ -99,6 +99,8 @@ body {
     text-align: center;
     line-height: 24px;
     list-style-type: none;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .nav a {
