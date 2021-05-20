@@ -18,21 +18,35 @@ body {
     height: 100%;
 }
 
+/* Skip to Content Button */
+
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -44px;
     left: 0;
     background-color: #91684a;
-    color: white;
+    color: #ffd56b;
     padding: 8px;
     z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    min-width: 44px;
+    min-height: 44px;
 }
 
-.skip-link::focus {
+.skip-link:focus {
     top: 0;
 }
 
+/* Header Styling */
+
 .header {
+    background-image: url(/images/header-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(49, 11, 11, 0.8);
+    background-blend-mode: darken;
     min-height: 56px;
     transition: min-height 0.3s;
 }
@@ -60,7 +74,11 @@ body {
     color: white;
     margin: 10px auto;
     display: none;
+    min-width: 44px;
+    min-height: 44px;
 }
+
+/* Navigation Styling */
 
 .nav {
     background-color: rgba(73, 51, 35);
@@ -83,6 +101,8 @@ body {
     text-align: center;
     line-height: 24px;
     list-style-type: none;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .nav a {
@@ -98,6 +118,8 @@ body {
     font-weight: bold;
     color: #ffd56b;
 }
+
+/* Hero Styling */
 
 .hero {
     background-image: url(/images/heros/hero-image_2.jpg);
@@ -120,18 +142,11 @@ body {
     font-weight: lighter;
 }
 
+/* Main Content Styling */
+
 main {
     width: 100%;
-    height: 370%;
     padding: 10px;
-}
-
-#lists-container {
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    overflow: auto;
 }
 
 .list-label {
@@ -142,9 +157,7 @@ main {
     margin-top: 20px;
 }
 
-
 .restaurant-item {
-    margin: 27px;
     padding: 17px;
     width: 100%;
     border-radius: 10px;
@@ -155,7 +168,6 @@ main {
 
 .restaurant-thumbnail {
     width: 100%;
-    height: 300px;
 }
 
 .restaurant-name {
@@ -188,6 +200,8 @@ main {
     border: 1px solid #865858;
 }
 
+/* Footer Styling */
+
 footer {
     background-color: #393e46;
     padding: 20px;
@@ -198,6 +212,152 @@ footer {
     bottom: 0;
 }
 
+/* iPhone 5/SE */
+
+@media only screen and (device-width : 320px) and (device-height : 568px) { 
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 1720%;
+    }
+}
+
+/* iPhone X */
+@media only screen and (device-width : 375px) and (device-height : 812px) { 
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 1400%;
+    }
+}
+
+/* iPhone 6,7,8 */
+@media only screen and (device-width : 375px) and (device-height : 667px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 1420%;
+    }
+}
+
+/* Pixel 2 */
+@media screen and (device-width: 411px) and (device-height: 731px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 1350%;
+    }
+}
+
+/* Pixel 2 XL */
+@media screen and (device-width: 411px) and (device-height: 823px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    footer {
+        margin-top: 1325%;
+    }
+}
+
+/* iPhone 6,7,8 Plus */
+@media only screen and (device-width : 414px) and (device-height : 736px) { 
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    footer {
+        margin-top: 1340%;
+    }
+}
+
+/* iPad */
+@media only screen and (min-device-width : 768px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .restaurant-thumbnail {
+        height: 100%;
+    }
+
+    .restaurant-description {
+        font-size: 0.8em;
+    }
+
+    footer {
+        margin-top: 6700px;
+    }
+}
+
+/* iPad Pro */
+@media only screen and (min-device-width: 1024px) {
+    #lists-container {
+     margin: 30px auto;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+    }
+
+    .restaurant-thumbnail {
+        height: 300px;
+    }
+
+    footer {
+        margin-top: 2200px;
+    }
+
+}
+
+/* Larger Screen */
+
+@media only screen and (min-device-width: 1366px) {
+    #lists-container {
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .restaurant-thumbnail {
+        height: 300px;
+    }
+
+    footer {
+        margin-top: 1700px;
+    }
+
+}
+
 
 @media screen and (min-width: 500px) {
     .hero-headline {
@@ -205,67 +365,34 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    #lists-container {
-        margin: 30px auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-        overflow: auto;
-    }
-
-    .restaurant-thumbnail {
-        height: 100%;
-    }
-
-    footer {
-        margin-top: 1270%;
-    }
-
-    .restaurant-description {
-        font-size: 0.8em;
-    }
-
-    .hero {
-        padding: 5%;
-    }
+@media screen and (max-width: 884px) {
+.nav {
+    z-index: 10;
+    background-color: #cc9b6d;
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3 ease;
 }
 
-@media screen and (max-width: 884px) {
-    .nav {
-        z-index: 10;
-        background-color: #cc9b6d;
-        width: 300px;
-        position: absolute;
-        -webkit-transform: translate(-300px, 0);
-        transform: translate(-300px, 0);
-        transition: transform 0.3 ease;
-    }
+.open {
+    -webkit-transform: translate(0,0);
+    transform: translate (0,0);
+}
 
-    .open {
-        -webkit-transform: translate(0,0);
-        transform: translate (0,0);
-    }
+.nav-item {
+    display: list-item;
+    border-bottom: 1px solid #f1ca89;
+    width: 100%;
+    text-align: left;
+}
 
-    .nav-item {
-        display: list-item;
-        border-bottom: 1px solid #f1ca89;
-        width: 100%;
-        text-align: left;
-    }
+.header-hamburger {
+    display: block;
+    text-align: center;
+}
 
-    .header-hamburger {
-        display: block;
-        text-align: center;
-    }
-
-   }
-
-@media screen and (min-width: 1024px) {
-       main {
-           height: 400%;
-       }
-   }
-   
+}
 
 
