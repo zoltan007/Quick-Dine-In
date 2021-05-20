@@ -22,7 +22,7 @@ body {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -44px;
     left: 0;
     background-color: #91684a;
     color: #ffd56b;
@@ -30,6 +30,8 @@ body {
     z-index: 100;
     text-decoration: none;
     font-weight: bold;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .skip-link:focus {
@@ -147,13 +149,7 @@ main {
     padding: 10px;
 }
 
-#lists-container {
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    overflow: auto;
-}
+
 
 .list-label {
     font-size: 40px;
@@ -164,7 +160,6 @@ main {
 }
 
 .restaurant-item {
-    margin: 27px;
     padding: 17px;
     width: 100%;
     border-radius: 10px;
@@ -227,11 +222,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        overflow: auto;
     }
 
     footer {
-        margin-top: 1850%;
+        margin-top: 1720%;
     }
 }
 
@@ -242,11 +236,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        overflow: auto;
     }
 
     footer {
-        margin-top: 1500%;
+        margin-top: 1400%;
     }
 }
 
@@ -257,11 +250,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        overflow: auto;
     }
 
     footer {
-        margin-top: 1520%;
+        margin-top: 1420%;
     }
 }
 
@@ -272,11 +264,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        overflow: auto;
     }
 
     footer {
-        margin-top: 1445%;
+        margin-top: 1350%;
     }
 }
 
@@ -287,11 +278,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
-        overflow: auto;
     }
 
     footer {
-        margin-top: 1400%;
+        margin-top: 1325%;
     }
 }
 
@@ -301,12 +291,11 @@ footer {
         margin: 30px auto;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 10px;
-        overflow: auto;
+        gap: 15px;
     }
 
     footer {
-        margin-top: 1430%;
+        margin-top: 1340%;
     }
 }
 
@@ -317,7 +306,6 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
-        overflow: auto;
     }
 
     .restaurant-thumbnail {
@@ -329,7 +317,7 @@ footer {
     }
 
     footer {
-        margin-top: 7100px;
+        margin-top: 6700px;
     }
 }
 
@@ -340,7 +328,6 @@ footer {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 10px;
-     overflow: auto; 
     }
 
     .restaurant-thumbnail {
@@ -348,7 +335,7 @@ footer {
     }
 
     footer {
-        margin-top: 2500px;
+        margin-top: 2200px;
     }
 
 }
@@ -361,7 +348,6 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        overflow: auto; 
     }
 
     .restaurant-thumbnail {
