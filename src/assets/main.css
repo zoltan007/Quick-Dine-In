@@ -19,7 +19,6 @@ body {
 }
 
 /* Skip to Content Button */
-
 .skip-link {
     position: absolute;
     top: -44px;
@@ -146,6 +145,7 @@ body {
 
 main {
     width: 100%;
+    height: max-content;
     padding: 10px;
 }
 
@@ -203,7 +203,6 @@ main {
 }
 
 /* Footer Styling */
-
 footer {
     background-color: #393e46;
     padding: 20px;
@@ -214,8 +213,14 @@ footer {
     bottom: 0;
 }
 
-/* iPhone 5/SE */
+/* Galaxy S5 and Moto G4 */
+@media screen and (device-width: 360px) and (device-height: 640px) {
+    .card {
+        margin-top: 20px;
+    }
+}
 
+/* iPhone 5/SE */
 @media only screen and (device-width : 320px) and (device-height : 568px) { 
     #lists-container {
         margin: 30px auto;
@@ -224,8 +229,8 @@ footer {
         gap: 10px;
     }
 
-    footer {
-        margin-top: 1720%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -238,8 +243,8 @@ footer {
         gap: 10px;
     }
 
-    footer {
-        margin-top: 1400%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -252,8 +257,8 @@ footer {
         gap: 10px;
     }
 
-    footer {
-        margin-top: 1420%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -266,8 +271,8 @@ footer {
         gap: 10px;
     }
 
-    footer {
-        margin-top: 1350%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -280,8 +285,8 @@ footer {
         gap: 10px;
     }
 
-    footer {
-        margin-top: 1325%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -294,8 +299,8 @@ footer {
         gap: 15px;
     }
 
-    footer {
-        margin-top: 1340%;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -316,8 +321,8 @@ footer {
         font-size: 0.8em;
     }
 
-    footer {
-        margin-top: 6700px;
+    .card {
+        margin-top: 20px;
     }
 }
 
@@ -334,10 +339,9 @@ footer {
         height: 300px;
     }
 
-    footer {
-        margin-top: 2200px;
+    .card {
+        margin-top: 20px;
     }
-
 }
 
 /* Larger Screen */
@@ -353,13 +357,7 @@ footer {
     .restaurant-thumbnail {
         height: 300px;
     }
-
-    footer {
-        margin-top: 1700px;
-    }
-
 }
-
 
 @media screen and (min-width: 500px) {
     .hero-headline {
