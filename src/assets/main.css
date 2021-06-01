@@ -359,12 +359,6 @@ footer {
     }
 }
 
-@media screen and (min-width: 500px) {
-    .hero-headline {
-        margin-top: 10px;
-    }
-}
-
 @media screen and (max-width: 884px) {
 .nav {
     z-index: 10;

@@ -9,19 +9,19 @@ const mainElement = document.querySelector('main');
 const drawerElement = document.querySelector('#drawer');
 
 
-hamburgerButtonElement.addEventListener("click", event => {
-    drawerElement.classList.toggle('open');
-    event.stopPropagation();
+hamburgerButtonElement.addEventListener('click', (event) => {
+  drawerElement.classList.toggle('open');
+  event.stopPropagation();
 });
 
-mainElement.addEventListener('click', function () {
-    drawerElement.classList.remove('open');
+mainElement.addEventListener('click', function() {
+  drawerElement.classList.remove('open');
 });
 
 let datarest='';
 
 data.restaurants.forEach((restaurants) => {
-    datarest +=`
+  datarest +=`
         <div class="card">
             <section>
                 <article class="restaurant-item">
@@ -29,7 +29,7 @@ data.restaurants.forEach((restaurants) => {
                     <div class="restaurant-item-content">
                         <h1 class="restaurant-name">${restaurants.name}</h1>
                         <p class="restaurant-city"><strong>${restaurants.city}</strong></p>
-                        <p class="restaurant-description">${restaurants.description.substring(0,170)}</p>
+                        <p class="restaurant-description">${restaurants.description.substring(0, 170)}</p>
                         <p class="restaurant-rating"><strong> Rating: </strong> ${restaurants.rating}</p>
                         <button class="find-more" type="button" aria-label="see more info">Find More</button>
                     </div>
@@ -39,10 +39,8 @@ data.restaurants.forEach((restaurants) => {
     `;
 });
 
-document.getElementById("lists-container").innerHTML = datarest;
+document.getElementById('lists-container').innerHTML = datarest;
 
 console.log('Hello Coders! :)');
 
 
-
-    
